@@ -1,0 +1,25 @@
+// Base class
+open class Person(val name: String, val age: Int) {
+
+    open fun printDetails() {
+        println("Name: $name")
+        println("Age: $age")
+    }
+}
+
+// Subclass
+class Student(name: String, age: Int, val grade: String) : Person(name, age) {
+
+    override fun printDetails() {
+        super.printDetails()
+        println("Grade: $grade")
+    }
+}
+
+fun main() {
+    // Create a Student object
+    val student = Student("Abuabakar", 21, "A")
+
+    // Print all details
+    student.printDetails()
+}
